@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Index</title>
+	<style type="text/css">
+		body{
+			width: 80%;
+			margin: auto;
+		}
+		.side{
+			border: solid 1pt black;
+			position: relative;
+			float: left;
+			box-sizing: border-box;
+			width: 30%;
+			min-width: 200px;
+		}
+		.info{
+			border: solid 1pt black;
+			position: relative;
+			float: right;
+			box-sizing: border-box;
+			width: 70%;
+			max-width: calc(100%-200px);
+		}
+		.clear{
+			clear: both;
+		}
+
+		.foo-info{
+			min-height: 300px;
+			min-width: 500px;
+			background-color: lightblue;
+		}
+
+		.side>input:hover{
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<form>
+		<div class="side">
+				<input type="checkbox" name="vote-result" value="1">Candidate 1<br>
+				<input type="checkbox" name="vote-result" value="2">Candidate 2<br>
+				<input type="checkbox" name="vote-result" value="3">Candidate 3<br>
+				<input type="checkbox" name="vote-result" value="4">Candidate 4<br>
+				<input type="checkbox" name="vote-result" value="5">Candidate 5<br>
+		</div>
+		<div class="info" hidden>
+			<div class="foo-info"></div>
+		</div>
+		<div class="clear"></div>
+		<button class="submit" id="submit-btn">Submit</button>
+	</form>
+
+	<script type="text/javascript">
+		$('input.checkbox').click(event->{
+
+		})
+	</script>
+</body>
+</html>
