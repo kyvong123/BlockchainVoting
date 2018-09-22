@@ -5,7 +5,7 @@
 	<title>Index</title>
 	<style type="text/css">
 		body{
-			width: 80%;
+			/*width: 90%;*/
 			margin: auto;
 		}
 		.side{
@@ -28,6 +28,13 @@
 			clear: both;
 		}
 
+		.candidante-list{
+			list-style: none;
+		}
+		.candidante-list>li:hover{
+			cursor: pointer;
+		}
+
 		.foo-info{
 			min-height: 300px;
 			min-width: 500px;
@@ -38,31 +45,92 @@
 			cursor: pointer;
 		}
 	</style>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700">
+    <link rel="stylesheet" href="assets/css/styles.min.css">
 	<script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<form>
 		<div class="side">
-				<input type="checkbox" name="vote-result" value="1">Candidate 1<br>
-				<input type="checkbox" name="vote-result" value="2">Candidate 2<br>
-				<input type="checkbox" name="vote-result" value="3">Candidate 3<br>
-				<input type="checkbox" name="vote-result" value="4">Candidate 4<br>
-				<input type="checkbox" name="vote-result" value="5">Candidate 5<br>
+			<ul class="candidante-list">
+				<li><input type="checkbox" name="vote-result" value="1">Candidate 1<br></li>
+				<li><input type="checkbox" name="vote-result" value="2">Candidate 2<br></li>
+				<li><input type="checkbox" name="vote-result" value="3">Candidate 3<br></li>
+				<li><input type="checkbox" name="vote-result" value="4">Candidate 4<br></li>
+				<li><input type="checkbox" name="vote-result" value="5">Candidate 5<br></li>
+			</ul>
 		</div>
 		<div class="info">
-			<div class="foo-info" id="cand-1">A</div>
-			<div class="foo-info" id="cand-2" hidden="">B</div>
-			<div class="foo-info" id="cand-3" hidden="">C</div>
-			<div class="foo-info" id="cand-4" hidden="">D</div>
-			<div class="foo-info" id="cand-5" hidden="">E</div>
-			<div class="foo-info" id="cand-6" hidden="">F</div>
+			<div id="cand-1" style="display: none;">
+				<iframe src="Profile.html" style="width: 100%; height: 600px;"></iframe>
+			</div>
+			<iframe src="Profile2.html" style="width: 100%; height: 600px;display: none" id="cand-2"></iframe>
+			<iframe src="Profile3.html" style="width: 100%; height: 600px;display: none" id="cand-3"></iframe>
+			<div class="foo-info" style="width: 100%; height: 600px;" id="cand-4" hidden="">D</div>
+			<div class="foo-info" style="width: 100%; height: 600px;" id="cand-5" hidden="">E</div>
+			<div class="foo-info" style="width: 100%; height: 600px;" id="cand-6" hidden="">F</div>
 		</div>
 		<div class="clear"></div>
 		<button class="submit" id="submit-btn">Submit</button>
 	</form>
 
 	<script type="text/javascript">
-		function
+		function selectCandidate(x){
+			x = parseInt(x);
+			switch (x){
+				case 1:
+					document.getElementById("cand-1").style.display="block";
+					document.getElementById("cand-2").style.display="none";
+					document.getElementById("cand-3").style.display="none";
+					document.getElementById("cand-4").style.display="none";
+					document.getElementById("cand-5").style.display="none";
+					document.getElementById("cand-6").style.display="none";
+					break;
+				case 2:
+					document.getElementById("cand-1").style.display="none";
+					document.getElementById("cand-2").style.display="block";
+					document.getElementById("cand-3").style.display="none";
+					document.getElementById("cand-4").style.display="none";
+					document.getElementById("cand-5").style.display="none";
+					document.getElementById("cand-6").style.display="none";
+					break;
+				case 3:
+					document.getElementById("cand-1").style.display="none";
+					document.getElementById("cand-2").style.display="none";
+					document.getElementById("cand-3").style.display="block";
+					document.getElementById("cand-4").style.display="none";
+					document.getElementById("cand-5").style.display="none";
+					document.getElementById("cand-6").style.display="none";
+					break;
+				case 4:
+					document.getElementById("cand-1").style.display="none";
+					document.getElementById("cand-2").style.display="none";
+					document.getElementById("cand-3").style.display="none";
+					document.getElementById("cand-4").style.display="block";
+					document.getElementById("cand-5").style.display="none";
+					document.getElementById("cand-6").style.display="none";
+					break;
+				case 5:
+					document.getElementById("cand-1").style.display="none";
+					document.getElementById("cand-2").style.display="none";
+					document.getElementById("cand-3").style.display="none";
+					document.getElementById("cand-4").style.display="none";
+					document.getElementById("cand-5").style.display="block";
+					document.getElementById("cand-6").style.display="none";
+					break;
+			}
+		}
+
+		function checkboxOnClick(event){
+			var id = event.target.children[0].getAttribute('value');
+			console.log(id);
+			selectCandidate(id);
+		}
+
+		$('.candidante-list>li').click(checkboxOnClick);
 	</script>
 </body>
 </html>
