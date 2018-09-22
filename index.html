@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+	<meta charset="utf-8">
 	<title>Index</title>
 	<style type="text/css">
 		body{
@@ -37,6 +38,7 @@
 			cursor: pointer;
 		}
 	</style>
+	<script src="js/jquery-3.3.1.min.js"></script>
 </head>
 <body>
 	<form>
@@ -47,17 +49,20 @@
 				<input type="checkbox" name="vote-result" value="4">Candidate 4<br>
 				<input type="checkbox" name="vote-result" value="5">Candidate 5<br>
 		</div>
-		<div class="info" hidden>
-			<div class="foo-info"></div>
+		<div class="info">
+			<div class="foo-info" id="cand-1">A</div>
+			<div class="foo-info" id="cand-2" hidden="">B</div>
+			<div class="foo-info" id="cand-3" hidden="">C</div>
+			<div class="foo-info" id="cand-4" hidden="">D</div>
+			<div class="foo-info" id="cand-5" hidden="">E</div>
+			<div class="foo-info" id="cand-6" hidden="">F</div>
 		</div>
 		<div class="clear"></div>
 		<button class="submit" id="submit-btn">Submit</button>
 	</form>
 
 	<script type="text/javascript">
-		$('input.checkbox').click(event->{
-
-		})
+		function
 	</script>
 </body>
 </html>
