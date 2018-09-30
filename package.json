@@ -1,0 +1,23 @@
+{
+  "name": "blockchain-voting",
+  "version": "1.0.0",
+  "description": "CNPMNC-181",
+  "main": "test-solid.js",
+  "dependencies": {
+    "solc": "^0.4.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyvong123/BlockchainVoting.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kyvong123/BlockchainVoting/issues"
+  },
+  "homepage": "https://github.com/kyvong123/BlockchainVoting#readme"
+}
