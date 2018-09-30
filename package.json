@@ -4,7 +4,8 @@
   "description": "CNPMNC-181",
   "main": "test-solid.js",
   "dependencies": {
-    "solc": "^0.4.25"
+    "solc": "^0.4.25",
+    "truffle": "^4.1.14"
   },
   "devDependencies": {},
   "scripts": {
